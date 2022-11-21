@@ -23,7 +23,7 @@
 .header
 {
   padding: 1.5rem 2rem;
-  background:linear-gradient(0deg, rgba(236, 82, 66, 0.2), rgba(236, 82, 66, 0.4)), url('../images/website-startups.jpg');
+  background:linear-gradient(0deg, rgba(236, 83, 66, 0.021), rgba(236, 83, 66, 0.158)), url('../images/website-startups.jpg');
   /* background: url('../images/back.jpg'); */
   height: 90vh;
   background-size: cover;
@@ -100,7 +100,6 @@ align-items: center;
   display: grid;
   grid-template-columns: 1fr 1fr 4fr;
   padding: 0.5rem 1rem;
-  border: 1px solid gray;
   background-color: hwb(0 83% 17% / 0.199);
   align-items: center;
   justify-content: center;
@@ -203,4 +202,30 @@ align-items: center;
   align-items: center;
   height: 15vh;
   gap: 3rem;
+}
+
+.flex
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-about img
+{
+  width: 300px;
+  padding: 1rem 1.5rem;
+  border: 2px solid var(--gray);
+  border-radius: 10px;
+}
+
+.past .first
+{
+  width: 300px;
+  height: 150px;
+  background: url(../images/back.jpg);
+  background-size: cover;
+  color: white;
+  
 }
