@@ -25,43 +25,48 @@
   padding: 1.5rem 2rem;
   background:linear-gradient(0deg, rgba(236, 82, 66, 0.2), rgba(236, 82, 66, 0.4)), url('../images/website-startups.jpg');
   /* background: url('../images/back.jpg'); */
-  height: 100vh;
+  height: 90vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y:center;
   background-blend-mode: overlay;
+  
 }
 
 .headline 
 {
+
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 2rem;
+  margin-top: 2.6rem;
 }
 
 .header h1
 {
   color: var(--color);
+  font-size: 26px;
+  font-weight: 500;
 }
 .header .title
 {
   color: var(--color);
-  font-weight: 700;
-  font-size: 30px;
+  font-weight: 900;
+  font-size: 35px;
+}
+.header .headline-detail
+{
+  background-color: rgba(252, 244, 244, 0.753);
+  border: 4px solid white;
+  border-radius: 3px;
+  padding: 0.6rem;
+  text-align: justify;
+  margin: 1.6rem 0;
 }
 .header .timing
 {
   color: white;
   font-size: 25px;
-}
-.header .headline-detail
-{
-  background-color: rgba(233, 229, 229, 0.493);
-  border: 4px solid white;
-  border-radius: 3px;
-  padding: 0.6rem;
-  text-align: justify;
 }
 
 .works {
@@ -69,7 +74,7 @@
 background-size: cover;
 background-repeat: no-repeat;
 height: 100%;
-padding: 1.2rem;
+padding: 2rem 1.2rem;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -124,4 +129,78 @@ align-items: center;
   border: none;
   margin-top: 1rem;
   
+}
+
+.our-team
+{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1.5rem 0.9rem;
+}
+
+.employee 
+{
+  display:grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+
+}
+.employee img
+{
+  width: 120px;
+  background-image: url(../images/icons8-menu-50.png);
+}
+.employee h3
+{
+  font-size: 18px;
+  font-weight: 900;
+
+  margin: 0;
+}
+.employee h4
+{
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color);
+
+  margin: 0;
+}
+.employee hr{
+  width: 25px;
+  margin: 6px 0;
+
+}
+.employee p
+{
+  font-size: 11px;
+
+}
+
+
+.partners
+{
+  width: 100%;
+  background-color: var(--black);
+  padding: 1rem;
+
+
+}
+.partners ul
+{
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+
+}
+
+.copyright
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15vh;
+  gap: 3rem;
 }
