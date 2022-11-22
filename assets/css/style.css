@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Roboto:wght@300;500;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Roboto:wght@300;500;900&display=swap");
 
 :root {
   --color: #ec5242;
   /* --color-btn: #b19610; */
-  --black: #272A31;
-  --gray: #D3D3D3;
+  --black: #272a31;
+  --gray: #d3d3d3;
   /* --border: 0.1rem solid rgba(0, 0, 0, 0.1);
   --border-hover: 0.1rem solid var(--black);
   --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); */
@@ -16,87 +16,266 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Lato', sans-serif;;
+  font-family: "Lato", sans-serif;
+  list-style: none;
+  text-decoration: none;
 }
 
-
-.header
-{
+.header {
   padding: 1.5rem 2rem;
-  background:linear-gradient(0deg, rgba(236, 83, 66, 0.021), rgba(236, 83, 66, 0.158)), url('../images/website-startups.jpg');
-  /* background: url('../images/back.jpg'); */
+  /* background:linear-gradient(0deg, rgba(236, 83, 66, 0.021), rgba(236, 83, 66, 0.158)), url('../images/website-startups.jpg'); */
+  background: url("../images/website-startups.jpg");
   height: 90vh;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position-y:center;
+  background-position-y: center;
   background-blend-mode: overlay;
-  
+}
+/* .nav-bar {
+  position: sticky;
+} */
+.menu {
+  display: flex;
+  flex-direction: column;
+  transition: 0.7s;
+  padding: 2rem 3rem;
+  gap: 2em;
+  background-color: rgba(255, 255, 255, 0.849);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: -100%;
+}
+.menu.active {
+  left: 0;
+}
+.menu a {
+  color: black;
+  font-size: 32px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+.menu a:hover {
+  color: var(--color);
+}
+.menu-item {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.411);
+}
+.menu img {
+  float: right;
+  cursor: pointer;
+}
+.humbarger {
+  cursor: pointer;
+  width: 30px;
 }
 
-.headline 
-{
-
+.headline {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-top: 2.6rem;
 }
 
-.header h1
-{
+.header h1 {
   color: var(--color);
   font-size: 26px;
   font-weight: 500;
 }
-.header .title
-{
-  color: var(--color);
+.header .title {
+  /* color: var(--color); */
   font-weight: 900;
   font-size: 35px;
+
+  
+  /* Create the gradient. */
+  background-image: linear-gradient(
+        45deg,
+        #ec5242 16.666%, 
+        #E16541 16.666%, 
+        #cc0303 33.333%, 
+        #f14343 33.333%, 
+        #ec5242 50%, 
+        #253cbd 50%, 
+        #30185c 66.666%, 
+        #476098 66.666%, 
+        #476098 83.333%, 
+        #A7489B 83.333%);
+  
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  
+  /* Animate the text when loading the element. */
+    /* This animates it on page load and when hovering out. */
+    animation: rainbow-text-simple-animation-rev 0.75s ease forwards;
+
 }
-.header .headline-detail
-{
-  background-color: rgba(252, 244, 244, 0.753);
+
+.headline .title:hover{
+    animation: rainbow-text-simple-animation 1.75s ease-in forwards;
+}
+
+
+/* Move the background and make it smaller. */
+/* Animation shown when entering the page and after the hover animation. */
+@keyframes rainbow-text-simple-animation-rev {
+    0% {
+        background-size: 650%;
+    }
+    40% {
+        background-size: 650%;
+    }
+    100% {
+        background-size: 100%;
+    }
+}
+
+/* Move the background and make it larger. */
+/* Animation shown when hovering over the text. */
+@keyframes rainbow-text-simple-animation {
+    0% {
+        background-size: 100%;
+    }
+    80% {
+        background-size: 650%;
+    }
+    100% {
+        background-size: 650%;
+    }
+}
+
+.header .headline-detail {
+  background-color: rgba(255, 255, 255, 0.562);
   border: 4px solid white;
   border-radius: 3px;
   padding: 0.6rem;
   text-align: justify;
   margin: 1.6rem 0;
 }
-.header .timing
-{
+.header .timing {
   color: white;
   font-size: 25px;
 }
+.logo {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .top-header
+  {
+    position: fixed;
+    width: 100%;
+  }
+  .nav1
+  {
+    padding: 0.4rem 6rem;
+  }
+  .nav1 a
+  {
+    text-decoration: none;
+    color: white;
+  }
+  .nav1 a:hover
+  {
+    color: var(--color);
+  }
+  .nav-bar
+{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 6rem;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  background-color: rgb(255, 247, 247);
+  /* border: 4px solid green; */
+}
+.menu {
+  flex-direction: row;
+  padding: 0;
+  /* gap: 2em; */
+  background-color: rgba(255, 255, 255, 0);
+  height: auto;
+  width: auto;
+  position: static;
+  top: 0;
+  margin: 0;
+  left: 0;
+}
+  .logo
+  {
+    display: block;
+    text-decoration: none;
+    color: var(--black);
+    font-size: 32px;
+  }
+  .menu-item {
+    
+    border: none;
+  }
+  .menu-item a
+  {
+    font-size: 30px;
+  }
+  .humbarger,
+  .close {
+    display: none;
+  }
+  .headline
+  {
+    margin: 7rem 13rem;
+  }
+  .headline h1
+  {
+    font-size: 44px;
+  }
+  .headline .title
+{
+  font-size: 64px;
+  width: 70%;
+}
+  .headline .headline-detail
+  {
+    width: 60%;
+    font-size: 24px;
+  }
+}
 
 .works {
-  background:linear-gradient(0deg, rgba(53, 51, 51, 0.9), rgba(41, 40, 40, 0.9)), url('../images/pexels-eva-bronzini-7599547.jpg');
-background-size: cover;
-background-repeat: no-repeat;
-height: 100%;
-padding: 2rem 1.2rem;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-
+  background: linear-gradient(
+      0deg,
+      rgba(53, 51, 51, 0.9),
+      rgba(41, 40, 40, 0.9)
+    ),
+    url("../images/pexels-eva-bronzini-7599547.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  padding: 2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.heading
-{
+.heading {
   color: white;
   text-align: center;
 }
-.hr-line
-{
+.hr-line {
   border: 2px solid var(--color);
   width: 60px;
   margin: auto;
-  
 }
 
-
-.w-card
-{
+.w-card {
   display: grid;
   grid-template-columns: 1fr 1fr 4fr;
   padding: 0.5rem 1rem;
@@ -105,98 +284,76 @@ align-items: center;
   justify-content: center;
   gap: 0.8rem;
   margin-top: 1rem;
-
 }
-.w-card h2
-{
+.w-card h2 {
   color: var(--color);
   font-size: 16px;
   font-weight: 700;
 }
-.w-card p
-{
+.w-card p {
   color: white;
   font-size: 11px;
-  
 }
 
-.join-button
-{
+.join-button {
   background-color: var(--color);
   color: white;
   padding: 1rem 3rem;
   border: none;
   margin-top: 1rem;
-  
 }
 
-.our-team
-{
+.our-team {
   display: flex;
   justify-content: center;
   flex-direction: column;
   padding: 1.5rem 0.9rem;
 }
 
-.employee 
-{
-  display:grid;
+.employee {
+  display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-rows: 1fr;
   gap: 1rem;
   margin-top: 1rem;
-
 }
-.employee img
-{
+.employee img {
   width: 120px;
   background-image: url(../images/icons8-menu-50.png);
 }
-.employee h3
-{
+.employee h3 {
   font-size: 18px;
   font-weight: 900;
 
   margin: 0;
 }
-.employee h4
-{
+.employee h4 {
   font-size: 14px;
   font-weight: 600;
   color: var(--color);
 
   margin: 0;
 }
-.employee hr{
+.employee hr {
   width: 25px;
   margin: 6px 0;
-
 }
-.employee p
-{
+.employee p {
   font-size: 11px;
-
 }
 
-
-.partners
-{
+.partners {
   width: 100%;
   background-color: var(--black);
   padding: 1rem;
-
-
 }
-.partners ul
-{
+.partners ul {
   list-style: none;
   padding: 0;
   margin: 1rem 0;
-
 }
 
-.copyright
-{
+.copyright {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -204,28 +361,33 @@ align-items: center;
   gap: 3rem;
 }
 
-.flex
-{
+.flex {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.main-about img
-{
+.main-about img {
   width: 300px;
   padding: 1rem 1.5rem;
   border: 2px solid var(--gray);
   border-radius: 10px;
 }
 
-.past .first
-{
+.past .first {
   width: 300px;
   height: 150px;
   background: url(../images/back.jpg);
   background-size: cover;
   color: white;
-  
+  border-radius: 6px;
+}
+.past .second {
+  width: 300px;
+  height: 150px;
+  background: url(../images/back.jpg);
+  background-size: cover;
+  color: white;
+  border-radius: 6px;
 }
