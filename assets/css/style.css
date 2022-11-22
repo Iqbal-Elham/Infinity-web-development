@@ -22,10 +22,10 @@
 }
 
 .header {
-  padding: 1.5rem 2rem;
+  padding: 2.5rem 2rem;
   /* background:linear-gradient(0deg, rgba(236, 83, 66, 0.021), rgba(236, 83, 66, 0.158)), url('../images/website-startups.jpg'); */
   background: url("../images/website-startups.jpg");
-  height: 90vh;
+  height: 98vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: center;
@@ -76,7 +76,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 2.6rem;
+  margin-top: 3.6rem;
 }
 
 .header h1 {
@@ -111,6 +111,7 @@
   /* Use the text as a mask for the background. */
   /* This will show the gradient as a text color rather than element bg. */
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent; 
   
   /* Animate the text when loading the element. */
@@ -233,19 +234,22 @@
   {
     margin: 7rem 13rem;
   }
+  
+}
+@media (min-width:992px) {
   .headline h1
   {
-    font-size: 44px;
+    font-size: 32px;
   }
   .headline .title
 {
-  font-size: 64px;
+  font-size: 54px;
   width: 70%;
 }
   .headline .headline-detail
   {
     width: 60%;
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 
@@ -303,6 +307,40 @@
   margin-top: 1rem;
 }
 
+@media (min-width: 768px) {
+  /* .works{
+    gap: 3rem;
+  } */
+  .work-cards
+  {
+    display: flex;
+    gap:0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 3rem 0;
+  }
+  .w-card
+  {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 250px;
+    padding: 0rem 0.5rem;
+  
+  }
+  .w-card h2 {
+    font-size: 28px;
+  } 
+  .w-card p {
+    font-size: 16px;
+  } 
+  .join-button
+  {
+    margin: 1.5rem;
+  }
+  
+}
+
 .our-team {
   display: flex;
   justify-content: center;
@@ -340,6 +378,30 @@
 }
 .employee p {
   font-size: 11px;
+}
+
+
+@media (min-width: 768px) {
+
+.team {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem 0;
+  padding: 0;
+  place-items: center;
+  margin: 4rem auto;
+
+}
+.employee
+{
+  width: 80%;
+  margin: 0;
+}
+.employee p
+{
+  width: 70%;
+
+}
 }
 
 .partners {
@@ -390,4 +452,12 @@
   background-size: cover;
   color: white;
   border-radius: 6px;
+}
+
+@media (min-width: 768px) {
+  .partners ul 
+  {
+    margin: 3.5rem 0;
+  }
+  
 }
