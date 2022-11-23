@@ -16,7 +16,7 @@
 
 ## Live Demo 
 
-[]()
+[Infinity](https://iqbal-elham.github.io/Infinity-web-development/)
 
 ## Get Started
 
@@ -54,8 +54,8 @@ Test for Linters For tracking linter errors locally you need to follow these ste
 
 👤 **Iqbal Elham**
 
-- GitHub: [@iqbal-elham](https://github.com/Iqbal-Elham)
-- linkedIn: []
+- GitHub: [iqbal-elham](https://github.com/Iqbal-Elham)
+- linkedIn: [iqbal-elham](https://www.linkedin.com/in/iqbal-elham-8830aa19a/)
 
 
 ## 🤝 Contributing
