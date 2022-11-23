@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Roboto:wght@300;500;900&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:wght@300;400;700;900&family=Roboto:wght@300;500;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Great+Vibes&family=Lato:wght@300;400;700;900&family=Roboto:wght@300;500;900&display=swap');
 :root {
   --color: #ec5242;
   /* --color-btn: #b19610; */
@@ -85,49 +86,32 @@
   font-weight: 500;
 }
 .header .title {
-  /* color: var(--color); */
   font-weight: 900;
   font-size: 35px;
-
-  
-  /* Create the gradient. */
   background-image: linear-gradient(
         45deg,
-        #ec5242 16.666%, 
-        /* #E16541 16.666%,  */
+        rgb(221, 41, 21) 16.666%, 
         #cc0303 33.333%, 
-        #cc0303 33.333%, 
+        #ccb803 33.333%, 
         #f14343 33.333%, 
         #ec5242 50%, 
-        #253cbd 50%, 
-        #30185c 66.666%, 
-        #476098 66.666%, 
-        #476098 83.333%, 
-        #A7489B 83.333%);
-  
-  /* Set the background size and repeat properties. */
+        #bd2564 50%, 
+        #49185c 66.666%, 
+        #8c9847 66.666%, 
+        #d5d82f 83.333%, 
+        #c03b24 83.333%);
   background-size: 100%;
   background-repeat: repeat;
-
-  /* Use the text as a mask for the background. */
-  /* This will show the gradient as a text color rather than element bg. */
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent; 
-  
-  /* Animate the text when loading the element. */
-    /* This animates it on page load and when hovering out. */
-    animation: rainbow-text-simple-animation-rev 0.75s ease forwards;
-
+  animation: rainbow-text-simple-animation-rev 0.75s ease forwards;
 }
 
 .headline .title:hover{
     animation: rainbow-text-simple-animation 1.75s ease-in forwards;
 }
 
-
-/* Move the background and make it smaller. */
-/* Animation shown when entering the page and after the hover animation. */
 @keyframes rainbow-text-simple-animation-rev {
     0% {
         background-size: 650%;
@@ -140,8 +124,6 @@
     }
 }
 
-/* Move the background and make it larger. */
-/* Animation shown when hovering over the text. */
 @keyframes rainbow-text-simple-animation {
     0% {
         background-size: 100%;
@@ -175,6 +157,8 @@
   {
     position: fixed;
     width: 100%;
+    z-index: 2;
+
   }
   .nav1
   {
@@ -203,7 +187,6 @@
 .menu {
   flex-direction: row;
   padding: 0;
-  /* gap: 2em; */
   background-color: rgba(255, 255, 255, 0);
   height: auto;
   width: auto;
@@ -218,7 +201,13 @@
     text-decoration: none;
     color: var(--black);
     font-size: 32px;
+    
   }
+  .logo span 
+  {
+  /* font-family: 'Great Vibes', cursive; */
+  font-family: 'Dancing Script', cursive;
+}
   .menu-item {
     
     border: none;
@@ -255,14 +244,10 @@
 }
 
 .works {
-  background: linear-gradient(
-      0deg,
-      rgba(53, 51, 51, 0.6),
-      rgba(41, 40, 40, 0.6)
-    ),
-    url("../images/pexels-eva-bronzini-7599547.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: url("../images/pattern_bg.png");
+  /* background-size: cover; */
+  background-repeat: repeat;
+  background-color: #272a32;
   height: 100%;
   padding: 2rem 1.2rem;
   display: flex;
@@ -303,6 +288,7 @@
 {
   width: 70px;
   height: 70px;
+
 }
 .join-button {
   background-color: var(--color);
@@ -392,26 +378,18 @@
 }
 
 
+
 @media (min-width: 768px) {
 
 .team {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem 0;
+  grid-template-columns: repeat(2,1fr);
+  gap: 1rem;
   padding: 0;
-  place-items: center;
+  justify-items: end;
+  place-items: end;
   margin: 4rem auto;
-
-}
-.employee
-{
-  width: 80%;
-  margin: 0;
-}
-.employee p
-{
-  width: 70%;
-
+  width: 65%;
 }
 }
 
@@ -439,6 +417,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.company-name
+{
+  font-family: 'Great Vibes', cursive; ;
+  font-size: 34px;
 }
 
 .main-about img {
@@ -473,7 +456,7 @@
   {
     margin: 3.5rem 0;
   }
-  .main-about p 
+  .about-p
   {
     width: 50%;
   }
