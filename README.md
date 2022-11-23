@@ -2,15 +2,16 @@
 
 # Infinity website development company
 
-> This is the website of the Infinity Development company
+> This project represent the Infinity website development company blog.
 
 
 ## Built With
 
 - Html
 - Css
-- font-awesome
-- javascript
+- Font-awesome
+- Bootstrap
+- Javascript
 
 
 ## Live Demo 
@@ -54,7 +55,7 @@ Test for Linters For tracking linter errors locally you need to follow these ste
 👤 **Iqbal Elham**
 
 - GitHub: [@iqbal-elham](https://github.com/Iqbal-Elham)
-
+- linkedIn: []
 
 
 ## 🤝 Contributing
@@ -69,9 +70,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+Template was provided by Cindy Shin on Behance and you can view it [here](https://www.behance.net/gallery/29845175/CC-Global-Summit-2015)
 
 ## 📝 License
 
