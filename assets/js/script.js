@@ -60,7 +60,7 @@ const teamDiv = document.querySelector('.team');
 
 for (let i = 0; i < team.length; i += 1) {
   const eachTeam = `<div class="employee">
-  <img class="team-image" src="${team[i].image}" alt="">
+  <div class="team-bg"><img class="team-image" src="${team[i].image}" alt=""></div>
   <div class="co-workers-detail">
     <h3>${team[i].name}</h3>
     <h4>${team[i].field} </h4>

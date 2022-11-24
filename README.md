@@ -18,6 +18,10 @@
 
 [Infinity](https://iqbal-elham.github.io/Infinity-web-development/)
 
+## Video
+
+[Here](https://www.loom.com/share/b41a4b1a95d4490894c28f28832580e5) is a video of me walking you through the website and talking over the main features. 
+
 ## Get Started
 
  To get the content of this project locally you need to run the following commands in your terminal:
@@ -74,6 +78,4 @@ Template was provided by Cindy Shin on Behance and you can view it [here](https:
 
 ## 📝 License
 
-This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+This project is [MIT](./MIT.md) licensed.
