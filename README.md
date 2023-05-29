@@ -1,8 +1,7 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Infinity website development company
 
-> This project represent the Infinity website development company blog.
+> This is the Microverse first module capstone project that represent the Infinity website development company blog.
 
 
 ## Built With
